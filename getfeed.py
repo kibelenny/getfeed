@@ -8,12 +8,12 @@ class Feed:
             'User-Agent': 'Chrome/97.0.4692.71'
         }
         try:
-            self.request = requests.get(link, headers=headers)
+            self.request = requests.get(link, self.headers)
         except Exception as e:
             print('Error fetching the URL: ', link)
             print(e)
         try:
-            self.soup = BeautifulSoup(request.text, 'html.parser')
+            self.soup = BeautifulSoup(self.request.text, 'html.parser')
         except Exception as e:
             print('Could not parse the xml: ', self.url)
             print(e)
