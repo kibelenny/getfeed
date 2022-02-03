@@ -5,6 +5,8 @@ This is a script that gets feeds links from websites. It consists of a main clas
 **Feed.get_atom()** will return the Atom link or none if missing.  
   
 ```py
+from getfeed.feed import Feed
+
 feed = Feed('https://gizmodo.com/tech')  
 feed.get_feed()  
 
